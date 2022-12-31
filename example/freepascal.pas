@@ -1,4 +1,4 @@
-program powerWIN;
+program example;
 
 uses SysUtils, Process;
 
