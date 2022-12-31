@@ -9,23 +9,23 @@
 class Generator {
 
 	public :
-	   void key (int lengthKey, bool numberOnlyOption) {
+		void key (int lengthKey, bool numberOnlyOption) {
 
-	   		std::string result = "";
+			std::string result = "";
             
-	   		std::string numberCharacters = "1234567890";
-		    std::string lowerCharacters  = "abcdefghijklmnopqrstuvwxyz";
-		    std::string upperCharacters  = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-		    std::string allCharacters    = (
+			std::string numberCharacters = "1234567890";
+			std::string lowerCharacters  = "abcdefghijklmnopqrstuvwxyz";
+			std::string upperCharacters  = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+			std::string allCharacters    = (
 
-                lowerCharacters  +
-                numberCharacters +
-                upperCharacters
-            );
+				lowerCharacters  +
+				numberCharacters +
+				upperCharacters
+			);
 
 			srand (
-                time(0)
-            );
+				time(0)
+			);
 
 			if ( numberOnlyOption ) {
 
@@ -33,8 +33,8 @@ class Generator {
 
 					result += numberCharacters [
 
-                        rand() % numberCharacters.length() 
-                    ];
+						rand() % numberCharacters.length() 
+					];
 
 				}
 
@@ -44,13 +44,14 @@ class Generator {
 
 					result += allCharacters [ 
 
-                        rand() % allCharacters.length()
-                    ];
+						rand() % allCharacters.length()
+					];
 
 				}
+
 			}
             
-            std::cout << result << std::endl;
+			std::cout << result << std::endl;
 		}
 
 };
